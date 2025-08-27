@@ -43,7 +43,7 @@ def get_personas(limit: int = Query(10, le=100)):
 # Get N persona descriptions not randomly
 @app.get("/personas")
 def get_personas(limit: int = Query(10, le=100)):
-    return query_db("SELECT id, description FROM personas ORDER BY LIMIT ?", (limit,))
+    return query_db("SELECT id, description FROM personas LIMIT ?", (limit,))
 
 # Get one persona description by ID
 @app.get("/personas/{persona_id}")
