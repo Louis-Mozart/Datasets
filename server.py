@@ -23,8 +23,8 @@ def root():
         "message": "Welcome to the Persona KB API!",
         "description": "This API allows you to retrieve persona descriptions from the knowledge base.",
         "endpoints": {
-            "/personas_random?limit=N": "Get N random persona descriptions (default 10). Limit max 100.",
-            "/personas?limit=N": "Get N persona descriptions sequentially (ordered by ID). Limit max 100.",
+            "/personas_random?limit=N": "Get N random persona descriptions (default 10). Limit max 10000.",
+            "/personas?limit=N": "Get N persona descriptions sequentially (ordered by ID). Limit max 10000.",
             "/personas/{id}": "Get the description of a single persona by its ID."
         },
         "examples": {
