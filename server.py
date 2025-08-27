@@ -37,12 +37,12 @@ def root():
 
 # Get N random persona descriptions
 @app.get("/personas_random")
-def get_personas(limit: int = Query(10, le=100)):
+def get_personas(limit: int = Query(10, le=10000)):
     return query_db("SELECT id, description FROM personas ORDER BY RANDOM() LIMIT ?", (limit,))
 
 # Get N persona descriptions not randomly
 @app.get("/personas")
-def get_personas(limit: int = Query(10, le=100)):
+def get_personas(limit: int = Query(10, le=10000)):
     return query_db("SELECT id, description FROM personas LIMIT ?", (limit,))
 
 # Get one persona description by ID
