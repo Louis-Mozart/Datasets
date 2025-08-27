@@ -16,7 +16,24 @@ def query_db(query, params=()):
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to Persona KB. Try /personas or /personas/{id}"}
+    """
+    Welcome endpoint describing all available API routes.
+    """
+    return {
+        "message": "Welcome to the Persona KB API!",
+        "description": "This API allows you to retrieve persona descriptions from the knowledge base.",
+        "endpoints": {
+            "/personas_random?limit=N": "Get N random persona descriptions (default 10). Limit max 100.",
+            "/personas?limit=N": "Get N persona descriptions sequentially (ordered by ID). Limit max 100.",
+            "/personas/{id}": "Get the description of a single persona by its ID."
+        },
+        "examples": {
+            "Random personas": "/personas_random?limit=5",
+            "Sequential personas": "/personas?limit=5",
+            "Single persona by ID": "/personas/42"
+        }
+    }
+
 
 # Get N random persona descriptions
 @app.get("/personas_random")
