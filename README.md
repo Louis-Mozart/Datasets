@@ -16,12 +16,11 @@ It allows you to query persona descriptions that are stored in a local database,
 
 ---
 
-## 📦 Installation
+## Installation
 
 Clone the repository:
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/Louis-Mozart/Datasets/.git && cd <repo-name>
 ````
 
 Create a virtual environment and install dependencies:
@@ -36,7 +35,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Running the API
+## Running the API
 
 Start the FastAPI server:
 
@@ -98,7 +97,7 @@ GET /personas/5
 
 ---
 
-## 💻 Usage Examples
+## Usage Examples
 
 ### 1. Using Python (`requests`)
 
@@ -146,8 +145,8 @@ curl http://127.0.0.1:8000/personas/2
 
 ---
 
-## ⚠️ Note on Data
+## Note on Data
 
 The personas included in this KB are sourced from **HuggingFace datasets**.
-Make sure to check the license of the dataset you are using before deploying this API publicly.
+Ensure that you check the license of the dataset you are using before deploying this API publicly.
 
