@@ -1,12 +1,11 @@
-````markdown
+
 # Persona Knowledge Base API
 
 This project provides a lightweight **Persona Knowledge Base (KB)** built with **FastAPI** and **SQLite**.  
-It allows you to query persona descriptions that are stored in a local database, making it easy to retrieve and use them in experiments, chatbots, or other applications.
+It enables you to query persona descriptions stored in a local database, making it easy to retrieve and utilize them in experiments, chatbots, or other applications.
 
----
 
-## 🚀 Features
+## Features
 - Store all personas from a folder into a single SQLite database (`personas.db`).
 - REST API to:
   - Fetch N random persona descriptions.
@@ -33,7 +32,6 @@ venv\Scripts\activate      # on Windows
 pip install -r requirements.txt
 ```
 
----
 
 ## Running the API
 
@@ -47,7 +45,7 @@ By default, the server runs on `http://127.0.0.1:8000`.
 
 ---
 
-## 📖 API Endpoints
+## API Endpoints
 
 ### Root
 
@@ -143,7 +141,7 @@ Fetch persona with ID 2:
 curl http://127.0.0.1:8000/personas/2
 ```
 
----
+
 
 ## Note on Data
 
