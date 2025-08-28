@@ -151,16 +151,3 @@ curl http://127.0.0.1:8000/personas/2
 The personas included in this KB are sourced from **HuggingFace datasets**.
 Make sure to check the license of the dataset you are using before deploying this API publicly.
 
----
-
-## 📜 License
-
-This project is open source under the MIT license.
-Dataset usage depends on its original license.
-
-```
-
----
-
-Would you like me to also include a **JavaScript (fetch API) example** so people can query your personas directly in a web app?
-```
