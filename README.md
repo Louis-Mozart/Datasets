@@ -19,7 +19,7 @@ It enables you to query persona descriptions stored in a local database, making 
 
 Clone the repository:
 ```bash
-git clone https://github.com/Louis-Mozart/Datasets/.git && cd <repo-name>
+git clone https://github.com/Louis-Mozart/Datasets/.git && cd Datasets
 ````
 
 Create a virtual environment and install dependencies:
