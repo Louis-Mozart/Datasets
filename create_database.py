@@ -27,4 +27,4 @@ for json_file in FOLDER.glob("*.json"):
 conn.commit()
 conn.close()
 
-print("✅ Database built successfully")
+print("✅ Database built and saved successfully")
