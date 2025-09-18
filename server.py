@@ -28,8 +28,8 @@ def root():
             "/personas/{id}": "Get the description of a single persona by its ID."
         },
         "examples": {
-            "Random personas": "/personas_random?limit=5",
-            "Sequential personas": "/personas?limit=5",
+            "Random personas": "/personas_random?limit=10",
+            "Sequential personas": "/personas?limit=10",
             "Single persona by ID": "/personas/42"
         }
     }
