@@ -66,7 +66,7 @@ GET /personas_random?limit=10
 Returns up to 10 random persona descriptions.
 **Parameters**:
 
-* `limit` (int, optional): number of personas (default = 10, max = 100).
+* `limit` (int, optional): number of personas (default = 10, max = 200,000).
 
 ---
 
