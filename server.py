@@ -23,8 +23,8 @@ def root():
         "message": "Welcome to the Persona KB API!",
         "description": "This API allows you to retrieve persona descriptions from the knowledge base.",
         "endpoints": {
-            "/personas_random?limit=N": "Get N random persona descriptions (default 10). Limit max 10000.",
-            "/personas?limit=N": "Get N persona descriptions sequentially (ordered by ID). Limit max 10000.",
+            "/personas_random?limit=N": "Get N random persona descriptions (default 10). Limit max 200000.",
+            "/personas?limit=N": "Get N persona descriptions sequentially (ordered by ID). Limit max 200000.",
             "/personas/{id}": "Get the description of a single persona by its ID."
         },
         "examples": {
@@ -37,12 +37,12 @@ def root():
 
 # Get N random persona descriptions
 @app.get("/personas_random")
-def get_personas(limit: int = Query(10, le=10000)):
+def get_personas(limit: int = Query(10, le=200000)):
     return query_db("SELECT id, description FROM personas ORDER BY RANDOM() LIMIT ?", (limit,))
 
 # Get N persona descriptions not randomly
 @app.get("/personas")
-def get_personas(limit: int = Query(10, le=10000)):
+def get_personas(limit: int = Query(10, le=200000)):
     return query_db("SELECT id, description FROM personas LIMIT ?", (limit,))
 
 # Get one persona description by ID
